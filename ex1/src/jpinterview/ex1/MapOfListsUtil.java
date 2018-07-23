@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Utility class with methods for manipulating multimaps (Maps of Lists).
+ */
 public final class MapOfListsUtil {
 
     private MapOfListsUtil() {

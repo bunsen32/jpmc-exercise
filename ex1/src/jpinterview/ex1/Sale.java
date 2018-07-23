@@ -2,6 +2,9 @@ package jpinterview.ex1;
 
 import java.util.Objects;
 
+/**
+ * Immutable value object representing a single or multiple sales.
+ */
 public final class Sale {
 
     private final String productType;

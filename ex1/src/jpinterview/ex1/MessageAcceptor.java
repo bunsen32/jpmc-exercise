@@ -2,6 +2,13 @@ package jpinterview.ex1;
 
 import jpinterview.ex1.messagemodel.Message;
 
+/**
+ * Common interface for objects which accept (and presumably process)
+ * {@link Message}s.
+ *
+ * @see MessageProcessor
+ * @see MessageProcessorAndLogger
+ */
 public interface MessageAcceptor {
 
     /**

@@ -5,6 +5,11 @@ import jpinterview.ex1.Operation;
 
 import java.util.Objects;
 
+/**
+ * Abstract superclass of all immutable value objects representing single messages.
+ *
+ * Includes factory methods for creating new concrete message instances.
+ */
 public abstract class Message {
 
     private final MessageType messageType;
@@ -28,13 +33,11 @@ public abstract class Message {
         return new AdjustmentMessage(MessageType.MODIFY, productType, operation, argument);
     }
 
-
+    public MessageType getMessageType() {
+        return messageType;
+    }
 
     public String getProductType() {
         return productType;
-    }
-
-    public MessageType getMessageType() {
-        return messageType;
     }
 }
