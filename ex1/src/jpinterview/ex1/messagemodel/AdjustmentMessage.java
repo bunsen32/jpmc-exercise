@@ -33,4 +33,12 @@ public class AdjustmentMessage extends Message {
     public String getOperationString() {
         return this.operation.toString(this.argument);
     }
+
+    public Operation getOperation() {
+        return this.operation;
+    }
+
+    public int getArgument() {
+        return this.argument;
+    }
 }

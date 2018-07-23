@@ -2,9 +2,21 @@ JP Morgan "Message Processing" test
 Andrew Forrest, andrew@dysphoria.net
 23 July 2018
 
-Fully-automatic demo: run class
+There are 3 Java executables (classes with 'main' method):
 
     jpinterview.ex1.run.Demonstrate
+        Fully automatic: generates random messages, processes them
+        and logs the results to stdout.
+
+    jpinterview.ex1.run.ProcessInput
+        Takes input either on stdin, or from file given as first argument,
+        parses & processes the messages, and logs the output, as per
+        the specification.
+
+    jpinterview.ex1.run.CreateMessages
+        Randomly generates test messages and writes them to stdout.
+        One example output run is included in the top-level file
+        "test-input.txt". Can be used to generate input for ProcessInput.
 
 Sample output:
 

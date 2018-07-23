@@ -1,13 +1,30 @@
 package jpinterview.ex1;
 
+import jpinterview.ex1.messagemodel.AdjustmentMessage;
 import jpinterview.ex1.messagemodel.Message;
+import jpinterview.ex1.messagemodel.SaleMessage;
 
-import java.util.IllegalFormatException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class MessageParser {
-    private static final Pattern PATTERN = Pattern.compile("^T([123]) '(\\p{Print}+)'(?: ([\\p{Alnum}]+))+$");
+public final class MessageFormat {
+    private static final Pattern PATTERN = Pattern.compile("^T([123]) '(\\p{Print}+)'(?: ([\\p{Alnum}]+))(?: ([\\p{Alnum}]+))?$");
+
+    public static String toString(Message message) {
+        switch (message.getMessageType()) {
+            case SELL_ONE:
+                Sale sale1 = ((SaleMessage)message).getSale();
+                return String.format("T1 '%s' %dp", sale1.getProductType(), sale1.getUnitPrice());
+            case SELL_MULTIPLE:
+                Sale sale = ((SaleMessage)message).getSale();
+                return String.format("T2 '%s' %dp %d", sale.getProductType(), sale.getUnitPrice(), sale.getQuantity());
+            case MODIFY:
+                AdjustmentMessage adj = (AdjustmentMessage)message;
+                return String.format("T3 '%s' %s %d", adj.getProductType(), adj.getOperation(), adj.getArgument());
+            default:
+                throw new AssertionError("Should not get here.");
+        }
+    }
 
     /**
      * Parses the given input string and returns it as a {@link Message}.
@@ -47,7 +64,7 @@ public final class MessageParser {
         if (p.charAt(pLength - 1) != 'p') {
             throw new IllegalArgumentException("Price arguments must end with 'p'.");
         }
-        return Integer.parseInt(p, 0, pLength, 10);
+        return Integer.parseInt(p, 0, pLength - 1, 10);
     }
 
     private static int expectInt(Matcher match, int index) {

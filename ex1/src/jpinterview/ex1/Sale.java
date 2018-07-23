@@ -24,7 +24,7 @@ public final class Sale {
     }
 
     public int getUnitPrice() {
-        return quantity;
+        return this.unitPrice;
     }
 
     public Sale withPrice(int newPrice) {

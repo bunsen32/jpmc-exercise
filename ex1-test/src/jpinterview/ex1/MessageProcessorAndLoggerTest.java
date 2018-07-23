@@ -1,8 +1,9 @@
 package jpinterview.ex1;
 
 import jpinterview.ex1.messagemodel.Message;
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
 
 public class MessageProcessorAndLoggerTest {
 
@@ -13,6 +14,6 @@ public class MessageProcessorAndLoggerTest {
             p.accept(Message.sellOne("thing", 20));
         }
 
-        Assert.assertFalse(p.accept(Message.sellOne("thing", 10)));
+        assertFalse(p.accept(Message.sellOne("thing", 10)));
     }
 }
