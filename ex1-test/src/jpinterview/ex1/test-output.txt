@@ -1,0 +1,60 @@
+
+PROCESSED 10 MESSAGES
+SALES:
+  apple: 3 sales, 63p total
+  banana: 2 sales, 56p total
+  planet: 2 sales, 24p total
+  spanner: 8 sales, 116p total
+
+PROCESSED 20 MESSAGES
+SALES:
+  apple: 18 sales, 1,944p total
+  banana: 16 sales, 411p total
+  planet: 13 sales, 254p total
+  spaniel: 1 sales, 21p total
+  spanner: 8 sales, 116p total
+
+PROCESSED 30 MESSAGES
+SALES:
+  apple: 34 sales, 6,499p total
+  banana: 29 sales, 606p total
+  planet: 14 sales, 266p total
+  spaniel: 18 sales, 1,119p total
+  spanner: 9 sales, 128p total
+
+PROCESSED 40 MESSAGES
+SALES:
+  apple: 46 sales, 6,535p total
+  banana: 52 sales, 1,076p total
+  planet: 14 sales, 798p total
+  spaniel: 28 sales, 5,691p total
+  spanner: 9 sales, 128p total
+
+PROCESSED 50 MESSAGES
+SALES:
+  apple: 59 sales, 7,019p total
+  banana: 54 sales, 1,115p total
+  planet: 25 sales, 1,034p total
+  spaniel: 29 sales, 5,720p total
+  spanner: 10 sales, 152p total
+
+TERMINATED PROCESSING
+ADJUSTMENTS:
+  apple:
+    Multiply ⨉5
+    Subtract 4p
+    Multiply ⨉4
+    Add 2p
+    Multiply ⨉3
+    Add 1p
+    Add 5p
+  planet:
+    Multiply ⨉4
+    Multiply ⨉3
+    Add 2p
+  spaniel:
+    Add 2p
+    Multiply ⨉3
+    Subtract 5p
+    Add 5p
+    Multiply ⨉5

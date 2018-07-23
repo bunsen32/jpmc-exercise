@@ -35,12 +35,14 @@ public class MessageProcessorAndLogger implements MessageAcceptor {
         this.processor.accept(message);
         this.messageCount ++;
         if (this.messageCount % LOG_SALES_AFTER_N_MESSAGES == 0) {
-            this.log("\nPROCESSED " + this.messageCount + " MESSAGES");
+            this.log("");
+            this.log("PROCESSED " + this.messageCount + " MESSAGES");
             this.logSales();
         }
 
         if (this.messageCount == LOG_ADJUSTMENTS_AND_HALT_AFTER_N_MESSAGES) {
-            this.log("\nTERMINATED PROCESSING");
+            this.log("");
+            this.log("TERMINATED PROCESSING");
             this.logAdjustments();
             return false;
         }

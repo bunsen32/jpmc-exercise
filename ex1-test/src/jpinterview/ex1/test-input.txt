@@ -1,0 +1,50 @@
+T1 'banana' 31p
+T2 'spanner' 16p 7
+T1 'spanner' 4p
+T2 'apple' 4p 2
+T3 'planet' MULTIPLY 4
+T1 'banana' 25p
+T3 'apple' MULTIPLY 5
+T1 'apple' 23p
+T1 'planet' 10p
+T1 'planet' 14p
+T3 'spaniel' ADD 2
+T3 'apple' SUBTRACT 4
+T2 'apple' 29p 15
+T3 'apple' MULTIPLY 4
+T2 'planet' 22p 9
+T1 'spaniel' 21p
+T1 'banana' 4p
+T1 'planet' 16p
+T1 'planet' 16p
+T2 'banana' 27p 13
+T3 'apple' ADD 2
+T2 'spaniel' 28p 11
+T1 'spanner' 12p
+T2 'apple' 26p 3
+T3 'apple' MULTIPLY 3
+T1 'planet' 12p
+T3 'spaniel' MULTIPLY 3
+T2 'spaniel' 22p 6
+T2 'apple' 25p 13
+T2 'banana' 15p 13
+T2 'banana' 28p 2
+T2 'banana' 19p 6
+T3 'spaniel' SUBTRACT 5
+T3 'spaniel' ADD 5
+T2 'apple' 3p 12
+T2 'spaniel' 3p 1
+T3 'planet' MULTIPLY 3
+T2 'banana' 20p 15
+T3 'spaniel' MULTIPLY 5
+T2 'spaniel' 9p 9
+T1 'planet' 26p
+T2 'planet' 16p 10
+T3 'apple' ADD 1
+T2 'apple' 11p 13
+T1 'banana' 23p
+T1 'spaniel' 29p
+T1 'banana' 16p
+T3 'apple' ADD 5
+T3 'planet' ADD 2
+T1 'spanner' 24p
