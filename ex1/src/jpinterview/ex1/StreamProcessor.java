@@ -5,6 +5,11 @@ import jpinterview.ex1.messagemodel.Message;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+/**
+ * A class which processes messages by parsing them from a {@link BufferedReader}.
+ * Blank or whitespace-only lines are ignored. Malformed lines cause an {@link IOException}
+ * to be thrown.
+ */
 public class StreamProcessor {
 
     public static void process(BufferedReader lines, MessageAcceptor processor) throws IOException {

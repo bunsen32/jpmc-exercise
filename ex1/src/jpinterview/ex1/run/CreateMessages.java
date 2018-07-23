@@ -5,6 +5,9 @@ import jpinterview.ex1.messagemodel.Message;
 
 import java.util.Random;
 
+/**
+ * Executable Java class which outputs exactly 50 messages to the standard output.
+ */
 public class CreateMessages {
     public static void main(String[] args) {
         Random rng = new Random();

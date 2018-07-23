@@ -7,6 +7,15 @@ import java.util.function.UnaryOperator;
 
 import static jpinterview.ex1.MapOfListsUtil.addForKey;
 
+/**
+ * 'Database' of sales per product type. Supports storing new sales, applying an
+ * adjustment to existing sales for a product type, and retrieving all sales for
+ * all product types.
+ *
+ * <p>
+ * This class is mutable.
+ * </p>
+ */
 public class SalesStore {
     private Map<String, List<Sale>> productTypeLatestSales = new HashMap<>();
 

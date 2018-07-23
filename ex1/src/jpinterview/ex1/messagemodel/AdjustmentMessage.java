@@ -7,6 +7,9 @@ import jpinterview.ex1.Sale;
 import java.util.Objects;
 import java.util.function.UnaryOperator;
 
+/**
+ * Immutable value class which represents a sale-adjustment (type-3) message.
+ */
 public class AdjustmentMessage extends Message {
 
     private final Operation operation;

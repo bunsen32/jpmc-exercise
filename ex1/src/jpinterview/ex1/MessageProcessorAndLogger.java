@@ -7,13 +7,26 @@ import one.util.streamex.StreamEx;
 import java.text.MessageFormat;
 import java.util.Objects;
 
+/**
+ * Processes messages using an instance of {@link MessageProcessor} and logs all sales every 10
+ * messages, and logs all product type adjustments after 50 messages.
+ *
+ * <p>
+ * Stops accepting messages after 50 messages.
+ * </p>
+ */
 public class MessageProcessorAndLogger implements MessageAcceptor {
     public static final int LOG_SALES_AFTER_N_MESSAGES = 10;
 
     public static final int LOG_ADJUSTMENTS_AND_HALT_AFTER_N_MESSAGES = 50;
 
     private final MessageProcessor processor;
+
     private final Logger logger;
+
+    /**
+     * Number of messages processed so far.
+     */
     private int messageCount;
 
     public MessageProcessorAndLogger(Logger logger) {

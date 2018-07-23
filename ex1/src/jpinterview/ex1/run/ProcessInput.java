@@ -6,6 +6,10 @@ import jpinterview.ex1.SystemOutLogger;
 
 import java.io.*;
 
+/**
+ * Executable Java class which accepts messages from either a file (filename specified as first argument),
+ * or stdin (if no arguments)
+ */
 public class ProcessInput {
 
     public static void main(String[] args) {

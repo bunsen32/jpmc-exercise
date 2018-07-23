@@ -21,6 +21,14 @@ public abstract class Message {
         this.productType = Objects.requireNonNull(productType, "productType may not be null");
     }
 
+    public MessageType getMessageType() {
+        return messageType;
+    }
+
+    public String getProductType() {
+        return productType;
+    }
+
     public static SaleMessage sellOne(String productType, int price) {
         return new SaleMessage(MessageType.SELL_ONE, productType, price, 1);
     }
@@ -31,13 +39,5 @@ public abstract class Message {
 
     public static AdjustmentMessage modify(String productType, Operation operation, int argument) {
         return new AdjustmentMessage(MessageType.MODIFY, productType, operation, argument);
-    }
-
-    public MessageType getMessageType() {
-        return messageType;
-    }
-
-    public String getProductType() {
-        return productType;
     }
 }

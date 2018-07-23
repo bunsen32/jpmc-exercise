@@ -7,6 +7,11 @@ import jpinterview.ex1.messagemodel.Message;
 
 import java.util.Random;
 
+/**
+ * Executable Java class which generates random messages, and processes them until the
+ * {@link MessageProcessorAndLogger} tells it that it cannot accept any more.
+ * Logs all processor messages to stdout.
+ */
 public class Demonstrate {
     public static final String[] PRODUCTS = {
         "apple", "banana", "spaniel", "spanner", "planet"

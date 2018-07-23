@@ -10,10 +10,22 @@ import java.util.Map;
 
 import static jpinterview.ex1.MapOfListsUtil.addForKey;
 
+/**
+ * Class responsible only for processing {@link SaleMessage} and {@link AdjustmentMessage}s.
+ *
+ * @see MessageProcessorAndLogger which delegates processing to this class, but which additionally
+ * logs messages.
+ */
 public class MessageProcessor implements MessageAcceptor {
 
+    /**
+     * Accumulated adjustments per product type.
+     */
     private final Map<String, List<AdjustmentMessage>> productAdjustments = new HashMap<>();
 
+    /**
+     * The 'database' of sales.
+     */
     private final SalesStore salesStore;
 
     public MessageProcessor(SalesStore salesStore) {

@@ -7,9 +7,21 @@ import jpinterview.ex1.messagemodel.SaleMessage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Methods for converting {@link Message}s to Strings and Strings to Messages.
+ *
+ * @see #toString(Message)
+ * @see #fromString(String)
+ */
 public final class MessageFormat {
     private static final Pattern PATTERN = Pattern.compile("^T([123]) '(\\p{Print}+)'(?: ([\\p{Alnum}]+))(?: ([\\p{Alnum}]+))?$");
 
+    /**
+     * Converts the given message to its string form.
+     *
+     * @param message The message to be serialised.
+     * @return The message in string form.
+     */
     public static String toString(Message message) {
         switch (message.getMessageType()) {
             case SELL_ONE:
