@@ -18,6 +18,16 @@ There are 3 Java executables (classes with 'main' method):
         One example output run is included in the top-level file
         "test-input.txt". Can be used to generate input for ProcessInput.
 
+API:
+
+    The message processing endpoint is written to take messages from stdin
+    (writing its log messages to stdout, as per the specification).
+
+Unit tests:
+
+    Unit test coverage is pretty good, but the executable classes themselves
+    are not covered by tests.
+
 Sample output:
 
     PROCESSED 10 MESSAGES
